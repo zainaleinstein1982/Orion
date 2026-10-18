@@ -1,0 +1,6 @@
+{
+  "name": "ORION Enterprise Orchestrator",
+  "description": "Enterprise Decision & Productivity Orchestrator v1.0 for bilingual meeting analysis, RAG context retrieval, decision matrices, and agentic workflows.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
