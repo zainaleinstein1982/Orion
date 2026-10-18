@@ -1,5 +1,5 @@
 # 🌌 ORION — Enterprise Decision & Productivity Orchestrator v1.0
-> **Platform Orkestrasi Keputusan & Transkrip Rapat Cerdas Berbasis AI (Bilingual ID/EN)**
+> **Next-Generation Bilingual (ID/EN) AI Platform for Intelligent Meeting Intelligence, Decision Matrices, and Agentic Workflow Orchestration**
 
 [![React 19](https://img.shields.io/badge/React-19.0.1-blue.svg?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg?logo=typescript)](https://www.typescriptlang.org/)
@@ -10,93 +10,93 @@
 
 ---
 
-## 📖 1. Pengertian ORION
+## 📖 1. What is ORION?
 
-**ORION** (*Enterprise Decision & Productivity Orchestrator*) adalah platform enterprise cerdas generasi baru yang dirancang khusus untuk mentransformasi percakapan rapat, notulen, transkrip rekaman suara langsung, dan dokumen strategis menjadi **keputusan bisnis yang dapat ditindaklanjuti (*actionable decisions*)** dan **tindakan otomatis (*agentic workflows*)**.
+**ORION** (*Enterprise Decision & Productivity Orchestrator*) is an enterprise-grade AI system designed to transform spoken meetings, strategic transcripts, unorganized notes, and business documents into **rigorous, actionable decisions** and **automated agentic workflows**.
 
-### Latar Belakang Masalah
-Di lingkungan korporat dan pemerintahan modern, organisasi sering mengalami:
-1. **Meeting Fatigue & Information Loss**: Rapat panjang menghasilkan ratusan kalimat, namun poin keputusan dan PIC sering terlewat atau tidak tercatat rapi.
-2. **Ambiguitas Fakta vs Asumsi**: Sering terjadi bias saat diskusi, di mana opini dan asumsi pribadi dianggap sebagai fakta riil bisnis tanpa data pendukung.
-3. **Ketidakkonsistenan dengan Riwayat/Regulasi (RAG)**: Keputusan sering bertentangan dengan kebijakan lama, SLA, atau anggaran Q sebelumnya karena peserta tidak mengingat arsip historis.
-4. **Hambatan Bahasa (Bilingual Meeting)**: Diskusi tingkat enterprise di Asia Tenggara sering menggabungkan Bahasa Indonesia dan Bahasa Inggris secara simultan (*code-switching*).
-5. **Eksekusi Tertunda**: Notulen selesai, namun pembuatan tiket Jira, pengumuman Slack, dan reservasi kalender memakan waktu berhari-hari.
+### The Enterprise Dilemma
+Organizations worldwide suffer from systematic productivity drains:
+1. **Meeting Fatigue & Information Loss**: High-velocity meetings generate thousands of spoken words, yet crucial action items, owners, and hard deadlines are forgotten or inaccurately minuted.
+2. **Fact vs. Assumption Ambiguity**: Corporate discussions frequently blend verifiable data with personal speculation. Without classification, assumptions are mistakenly treated as validated facts.
+3. **Historical Inconsistencies & Knowledge Silos**: Teams frequently make decisions that unknowingly contradict past quarters' agreements, regulatory compliance policies, or existing SLAs because human memory fails to retrieve enterprise archives.
+4. **Bilingual & Code-Switching Barriers**: In multinational teams and Southeast Asian enterprise hubs, discussions naturally switch between English and Bahasa Indonesia (*bahasa campur*), causing off-the-shelf transcription tools to misinterpret context.
+5. **Execution Latency**: Generating minutes is only half the battle; translating decisions into Jira tickets, Slack announcements, calendar invites, and database syncs takes hours of manual busywork.
 
-### Solusi ORION
-ORION hadir sebagai **orkestrator sentral** dengan filosofi:
-- **Zero-Hallucination Guardrail**: Memberi label eksplisit pada setiap poin: `[FAKTA]`, `[INFERENSI]`, `[ASUMSI]`, atau `[KONFLIK]`.
-- **Dukungan Bilingual Penuh (ID/EN)**: Mampu mendengar, mentranskripsikan, menganalisis, dan menghasilkan dokumen bilingual secara instan.
-- **Decision Engine Terstruktur**: Menyusun matriks perbandingan opsi keputusan lengkap dengan kalkulasi dampak, risiko, skor prioritas, serta gerbang konfirmasi manusia (*Human-in-the-Loop*).
-- **Agentic Dispatching**: Mengonversi butir tindakan secara otomatis ke dalam format payload API siap pakai (Jira Ticket, Slack Alert, Google Calendar, dan RAG Upsert).
+### The ORION Solution
+ORION acts as a **central enterprise orchestrator** grounded in four key principles:
+- **Zero-Hallucination Guardrails**: Strictly labels every extracted point as `[FAKTA]` (*Fact*), `[INFERENSI]` (*Inference*), `[ASUMSI]` (*Assumption*), or `[KONFLIK]` (*Conflict*).
+- **Full Bilingual Parity (ID/EN)**: Native real-time understanding and translation for Bahasa Indonesia and English in dual-mode and code-switched dialogues.
+- **Structured Multi-Criteria Decision Matrices**: Evaluates competing proposals based on business impact, risk exposure, resource effort, and empirical data backing, guarded by a *Human-in-the-Loop* approval gate.
+- **Agentic Workflow Dispatch**: Instantly formats extracted action items into production-ready payloads for enterprise software (Jira Cloud, Slack Webhooks, Google Calendar, and Vector Knowledge Bases).
 
 ---
 
-## 🛠️ 2. Teknologi yang Digunakan (Tech Stack)
+## 🛠️ 2. Technology Stack
 
-ORION dibangun menggunakan arsitektur modern berkinerja tinggi, ringan, dan aman:
+ORION is engineered with a modern, reactive, ultra-low latency frontend and intelligent backend services:
 
-| Kategori | Teknologi | Deskripsi / Peran dalam Sistem |
+| Category | Technology | Architecture & System Role |
 | :--- | :--- | :--- |
-| **AI & LLM Engine** | **Google Gemini API (`@google/genai` v2.4+)** | Pemrosesan bahasa alami berkemampuan tinggi, penalaran kontekstual, ekstraksi entitas, deteksi risiko, dan pembangkitan teks bilingual. |
-| **Speech-to-Text** | **Web Speech API (`webkitSpeechRecognition`)** | Perekaman suara rapat secara langsung (*real-time live recording*) dengan dukungan transkripsi kontinyu dan dual-recognition (`id-ID` & `en-US`). |
-| **Frontend Framework** | **React 19 (Hooks & Functional)** | UI reaktif, modular, responsif terhadap viewport layar lebar monitor (*no-vertical-scroll layout*). |
-| **Bahasa Pemrograman**| **TypeScript 7 / 5.x** | *Type safety* penuh dari skema ekstraksi, struktur payload agentic, hingga model data keputusan. |
-| **Build Tool & Bundler**| **Vite 8** | *Hot Module Replacement* super cepat, kompilasi efisien, dan integrasi bundler optimal. |
-| **Styling & Theme** | **Tailwind CSS v4 + Canvas Particle API** | Desain bertema *Cyber-Enterprise Constellation* (Dark Cyan / Deep Navy / Slate) dengan animasi jaringan bintang interaktif. |
-| **Komponen UI & Ikon** | **Lucide React & Motion** | Ikonografi modern, transisi visual halus, visualisasi meteran skor dan status badge. |
-| **RAG & Vector Simulator**| **Semantic Cosine Search Engine** | Modul pencarian kemiripan vektor (*vector similarity*) untuk memvalidasi konsistensi dokumen terhadap basis pengetahuan internal. |
-| **Ekspor Dokumen** | **Markdown & JSON Exporter** | Fitur 1-klik unduh notulen rapat berformat Markdown (`.md`) dan payload teknis (`.json`). |
+| **Core AI & LLM Engine** | **Google Gemini API (`@google/genai` v2.4+)** | Contextual reasoning, semantic extraction, bias detection, multi-turn synthesis, and bilingual text generation using Google's frontier models. |
+| **Speech-to-Text (STT)** | **Web Speech API (`webkitSpeechRecognition`)** | Real-time, continuous microphone speech transcription directly in the client browser with bilingual recognition (`id-ID` & `en-US`). |
+| **Frontend Framework** | **React 19 (Hooks & Functional)** | Modular, component-driven UI architecture designed for zero vertical scroll on standard enterprise monitors (*Viewport Presence*). |
+| **Language & Typings** | **TypeScript 7 / 5.x** | Strict static type definitions across extraction schemas, decision models, and agentic dispatch structures. |
+| **Build & Tooling** | **Vite 8** | High-speed bundling, instantaneous Hot Module Replacement, and optimized production builds. |
+| **Styling & Design System** | **Tailwind CSS v4 + HTML5 Canvas API** | Cyber-Enterprise Constellation theme (Dark Cyan / Deep Navy / Slate) paired with an ambient, real-time particle connection network. |
+| **UI Components & Motion** | **Lucide React & Motion** | Modern iconography, fluid view transitions, and interactive progress/meter indicators. |
+| **RAG & Knowledge Engine** | **Semantic Cosine Vector Simulator** | Vector similarity scoring and consistency checking across enterprise corpus collections (*meeting_minutes*, *policies_sop*, *project_documents*). |
+| **Export Engine** | **Markdown & JSON Serializer** | One-click export and download for human-readable Markdown (`.md`) Minutes of Meeting and machine-readable JSON (`.json`) payloads. |
 
 ---
 
-## 🏗️ 3. Diagram Arsitektur Sistem
+## 🏗️ 3. Architecture Diagrams
 
-### 3.1 Diagram Arsitektur End-to-End (Mermaid)
+### 3.1 End-to-End System Architecture (Mermaid)
 
 ```mermaid
 flowchart TB
-    subgraph INGESTION["1. Layer Input & Audio Ingestion"]
+    subgraph INGESTION["1. Input & Audio Ingestion Layer"]
         A1["🎙️ Live Microphone Input<br/>(Web Speech API)"]
-        A2["📄 Manual Transcript / Text"]
-        A3["📑 Enterprise Document Upload"]
-        A4["❓ Ad-Hoc Strategic Query"]
+        A2["📄 Raw Meeting Transcript"]
+        A3["📑 Enterprise Strategy Document"]
+        A4["❓ Ad-Hoc Executive Query"]
     end
 
-    subgraph PREPROCESSING["2. Layer Pra-Pemrosesan & Normalisasi"]
+    subgraph PREPROCESSING["2. Preprocessing & Normalization"]
         B1["Bilingual Speech Recognizer<br/>(id-ID / en-US)"]
-        B2["Transcript Cleaner & Segmenter"]
-        B3["Noise Filter & Tokenizer"]
+        B2["Text Segmenter & Normalizer"]
+        B3["Noise & Conversational Filler Filter"]
     end
 
     subgraph ORCHESTRATION["3. ORION Core Orchestrator (Google Gemini API)"]
-        C1["Semantic Extraction Engine"]
-        C2["Fact & Bias Classifier<br/>[FAKTA] [INFERENSI] [ASUMSI] [KONFLIK]"]
-        C3["Bilingual Executive Generator (ID & EN)"]
-        C4["Safety Guardrails & Confidence Scorer"]
+        C1["Semantic Entity Extraction"]
+        C2["Fact & Bias Classifier<br/>[FACT] [INFERENCE] [ASSUMPTION] [CONFLICT]"]
+        C3["Bilingual Synthesis Engine (ID & EN)"]
+        C4["Guardrail Verification & Confidence Scorer"]
     end
 
     subgraph KNOWLEDGE["4. Enterprise Knowledge & RAG Layer"]
-        D1[("Vector DB / RAG Collections<br/>• meeting_minutes<br/>• project_documents<br/>• policies_sop<br/>• financial_records")]
-        D2["Historical Consistency Checker"]
-        D3["Policy Conflict Detector"]
+        D1[("Enterprise Vector Corpus<br/>• meeting_minutes<br/>• project_documents<br/>• policies_sop<br/>• financial_records")]
+        D2["Historical Consistency Validator"]
+        D3["Policy Conflict & SLA Cross-Checker"]
     end
 
     subgraph DECISION["5. Multi-Criteria Decision Engine"]
-        E1["Alternative Option Scoring Matrix"]
-        E2["Effort vs Business Impact Calculator"]
-        E3["Risk Evaluation"]
+        E1["Alternative Comparison Matrix"]
+        E2["Effort vs Business Impact Scoring"]
+        E3["Risk Exposure Assessment"]
         E4["🛡️ Human-in-the-Loop Confirmation Gate"]
     end
 
-    subgraph DISPATCH["6. Agentic Workflow & Dispatch Layer"]
-        F1["🎫 Jira Cloud: Auto Issue Creator"]
-        F2["💬 Slack: Channel Broadcast Alert"]
-        F3["📅 Google Calendar: Meeting & Milestone Scheduler"]
-        F4["💾 RAG Upsert: Vector DB Memory Synchronization"]
-        F5["📥 Export Suite: Markdown (.md) & JSON (.json)"]
+    subgraph DISPATCH["6. Agentic Workflow & Integration Layer"]
+        F1["🎫 Jira Cloud: Auto Issue & Epic Creator"]
+        F2["💬 Slack: Channel Announcement Broadcast"]
+        F3["📅 Google Calendar: Milestone & Follow-up Scheduler"]
+        F4["💾 RAG Upsert: Vector Memory Synchronization"]
+        F5["📥 Export Suite: Formatted Markdown & Raw JSON"]
     end
 
-    %% Flows
+    %% Pipeline Connections
     A1 --> B1 --> B2
     A2 --> B2
     A3 --> B2
@@ -123,165 +123,165 @@ flowchart TB
 
 ---
 
-### 3.2 Diagram Alur Data & Logika Eksekusi (Sequence Overview)
+### 3.2 Data Flow & Processing Lifecycle
 
 ```
-[ Pengguna / Rapat ]
-       │
-       ▼ (1) Suara Rapat / Teks Dokumen
+[ User Voice / Document ]
+           │
+           ▼  (1) Audio capture or text pasting
 [ Input View & Web Speech API ]
-       │
-       ▼ (2) Transkrip Bersih + Bilingual Tags
+           │
+           ▼  (2) Normalized bilingual stream
 [ ORION Analyzer Service ]
-       ├── (3A) Query RAG History ──> [ Vector Knowledge Base ]
-       │                                       │ (Konteks Historis & SOP)
-       │                                       ▼
-       ├── (3B) Prompt Orchestration ──> [ Google Gemini API ]
-       │                                       │ (Ekstraksi, Klasifikasi Fakta, Sintesis)
-       │                                       ▼
-       ├── (4) Evaluasi Bobot & Dampak ──> [ Decision Matrix Engine ]
-       │
-       ▼ (5) Hasil Analisis Terpadu
-┌────────────────────────────────────────────────────────┐
-│  • Dashboard: Ringkasan & Pending Tasks                │
-│  • Output View: Bilingual MoM & Executive Summary      │
-│  • Extraction View: Tabel Filter [FAKTA]/[ASUMSI]       │
-│  • Decision View: Matriks Opsi & Gerbang Konfirmasi    │
-│  • Action Plan View: Disparitas Tiket & Notifikasi     │
-└────────────────────────────────────────────────────────┘
-       │
-       ▼ (6) Eksekusi / Dispatch Terkonfirmasi
-[ Jira / Slack / Google Calendar / File Download ]
+           ├─── (3A) Historical Cross-Reference ──> [ Vector Knowledge Base ]
+           │                                                  │ (Retrieve SOP & Prior MoM)
+           │                                                  ▼
+           ├─── (3B) Intelligent Orchestration ───> [ Google Gemini API ]
+           │                                                  │ (Classify Facts, Detect Risks, MoM)
+           │                                                  ▼
+           ├─── (4) Weighted Evaluation ──────────> [ Decision Matrix Engine ]
+           │
+           ▼  (5) Unified Multi-View Output
+┌─────────────────────────────────────────────────────────────┐
+│  • Dashboard: Real-Time KPIs & Pending Action Stream        │
+│  • Output View: Bilingual Minutes of Meeting (Templates)    │
+│  • Extraction View: Searchable Fact vs. Assumption Table    │
+│  • Decision View: Multi-Option Scoring Matrix & Human Gate  │
+│  • Action Plan View: Agentic Dispatch Inspection Timeline   │
+└─────────────────────────────────────────────────────────────┘
+           │
+           ▼  (6) Authorized Action Dispatch
+[ Jira / Slack / Google Calendar / RAG Memory / Export ]
 ```
 
 ---
 
-## ✨ 4. Fitur-Fitur Utama ORION
+## ✨ 4. Key Capabilities & Features
 
-### 🎙️ 1. Perekaman Suara Rapat Langsung (Live Audio Recording)
-- Menggunakan browser native **Web Speech API** dengan parameter `continuous = true` dan `interimResults = true`.
-- Mendukung rapat dwibahasa (Bahasa Indonesia & Bahasa Inggris).
-- Tombol intuitif: `🎙️ Start Recording / Mulai Rekam` dan `🛑 Stop Recording / Hentikan Rekaman` lengkap dengan indikator *listening pulse*.
+### 🎙️ 1. Real-Time Bilingual Meeting Recording
+- Built directly on the browser's native **Web Speech API** (`continuous = true`, `interimResults = true`).
+- Supports bilingual speech recognition for **Bahasa Indonesia (`id-ID`)** and **English (`en-US`)**.
+- Features an accessible, responsive toggle (`🎙️ Start Recording / Mulai Rekam` / `🛑 Stop Recording / Hentikan Rekaman`) with a live pulsing status indicator.
 
-### 🏷️ 2. Klasifikasi Ketat Fakta vs Asumsi (*No-Hallucination*)
-Setiap butir temuan dikategorikan ke dalam taksonomi baku:
-- **`[FAKTA]`**: Pernyataan berlandaskan data metrik, angka terukur, atau dokumen resmi.
-- **`[INFERENSI]`**: Kesimpulan logis dari beberapa fakta gabungan.
-- **`[ASUMSI]`**: Dugaan atau hipotesis kerja yang membutuhkan validasi lebih lanjut.
-- **`[KONFLIK]`**: Pernyataan yang kontradiktif dengan data historis atau SOP organisasi.
+### 🏷️ 2. Fact vs. Assumption Tagging (*Anti-Hallucination*)
+Every extracted item undergoes rigorous taxonomic categorization:
+- **`[FAKTA]` / `[FACT]`**: Backed by measured financial figures, logged metrics, or official documentation.
+- **`[INFERENSI]` / `[INFERENCE]`**: Deductions logically derived from verified baseline facts.
+- **`[ASUMSI]` / `[ASSUMPTION]`**: Hypotheses or personal perspectives requiring empirical validation.
+- **`[KONFLIK]` / `[CONFLICT]`**: Statements contradicting indexed policies, earlier decisions, or SLAs.
 
-### 📊 3. Matriks Keputusan Multi-Kriteria (*Decision Matrix*)
-- Membandingkan opsi alternatif berdasarkan **Business Impact**, **Risiko**, **Tingkat Upaya (Effort)**, dan **Skor Kelayakan (0–100)**.
-- Menyediakan rekomendasi opsi terpilih disertai prasyarat (*prerequisites*).
-- Dilengkapi fitur **Human-in-the-Loop**: Perubahan status keputusan penting mewajibkan persetujuan manual administrator.
+### 📊 3. Multi-Criteria Decision Matrix
+- Compares strategic alternatives across **Business Impact**, **Risk Severity**, **Implementation Effort**, and **Confidence Scores (0–100%)**.
+- Highlights recommended courses of action with prerequisite dependencies.
+- **Human-in-the-Loop Safeguard**: High-stakes decisions cannot be marked as approved without explicit human administrator confirmation.
 
-### ⚡ 4. Agentic Workflow & Multi-System Dispatcher
-- Mengonversi *Action Items* langsung menjadi paket tindakan integrasi:
-  - **TICKET_CREATE**: Pembuatan issue Jira / ClickUp dengan PIC, prioritas P0-P3, dan deadline.
-  - **SLACK_NOTIFY**: Penyusunan format notifikasi channel tim lengkap dengan ringkasan eksekutif.
-  - **CALENDAR_INVITE**: Penjadwalan tindak lanjut review proyek.
-  - **RAG_UPSERT**: Penyimpanan hasil rapat ke memori vektor jangka panjang.
+### ⚡ 4. Agentic Workflow Dispatching
+- Automatically maps action items into ready-to-dispatch API payloads:
+  - **`TICKET_CREATE`**: Formatted for Jira / ClickUp with assignee, priority (P0–P3), and deadline.
+  - **`SLACK_NOTIFY`**: Structured for Slack webhooks with executive summaries and action checklists.
+  - **`CALENDAR_INVITE`**: Auto-populates meeting invites and milestones.
+  - **`RAG_UPSERT`**: Indexes synthesized meeting results back into enterprise vector memory.
 
-### 📚 5. Basis Pengetahuan & Simulasi RAG (Retrieval-Augmented Generation)
-- Memeriksa konsistensi hasil diskusi dengan 4 korpus data utama: *Meeting Minutes*, *Project Docs*, *Policies & SOP*, serta *Financial Records*.
-- *Vector Search Playground* untuk menguji kemiripan semantik query terhadap dokumen terindeks.
+### 📚 5. Enterprise Knowledge Base & RAG Playground
+- Validates meeting statements against 4 distinct indexed corporate corpus types: *Meeting Minutes*, *Project Documents*, *Policies & SOPs*, and *Financial Records*.
+- Interactive **Vector Search Playground** allowing users to test cosine similarity rankings in real time.
 
 ---
 
-## 📂 5. Struktur Direktori Proyek
+## 📂 5. Project Directory Structure
 
 ```
 orion-orchestrator/
-├── .env.example              # Template variabel lingkungan (GEMINI_API_KEY)
-├── index.html                # Entry point HTML & font typography
-├── metadata.json             # Konfigurasi perizinan mikrofon & Gemini API
-├── package.json              # Daftar pustaka & dependensi proyek
-├── tsconfig.json             # Konfigurasi compiler TypeScript
-├── vite.config.ts            # Konfigurasi bundler Vite & Tailwind 4
+├── .env.example              # Environment variables template (GEMINI_API_KEY)
+├── index.html                # HTML entry point, SEO tags, & font imports
+├── metadata.json             # AI Studio capabilities & permissions metadata
+├── package.json              # Application dependencies and execution scripts
+├── tsconfig.json             # TypeScript compiler configuration
+├── vite.config.ts            # Vite 8 & Tailwind CSS v4 bundler setup
 ├── src/
-│   ├── main.tsx              # Bootstrap React application
-│   ├── App.tsx               # State router, modal orchestration, & global view state
-│   ├── index.css             # Tailwind 4 theme, design tokens, & neon effects
+│   ├── main.tsx              # React application bootstrapper
+│   ├── App.tsx               # Primary application state, view routing, & modals
+│   ├── index.css             # Tailwind v4 theme, CSS variables, & custom styles
 │   ├── types/
-│   │   └── orion.ts          # TypeScript interfaces (Extraction, Matrix, Agentic Actions)
+│   │   └── orion.ts          # Core TypeScript models (Extractions, Matrix, Actions)
 │   ├── services/
-│   │   └── analyzer.ts       # Mesin orkestrator analisis, integrasi Gemini, & fallback
+│   │   └── analyzer.ts       # Central ORION analysis engine & Gemini orchestration
 │   ├── data/
-│   │   └── sampleScenarios.ts# Dataset uji enterprise (Budget Review, Cloud Outage, dll)
+│   │   └── sampleScenarios.ts# Enterprise test presets (Budget Q4, Core Banking, etc.)
 │   └── components/
-│       ├── ConstellationCanvas.tsx # Ambient canvas network particle visualizer
-│       ├── Sidebar.tsx             # Navigasi utama dengan 8 tampilan kerja
-│       ├── TopBar.tsx              # Breadcrumbs, bilingual switcher, status indikator
+│       ├── ConstellationCanvas.tsx # Ambient canvas particle background visualizer
+│       ├── Sidebar.tsx             # Responsive navigation bar with 8 workspaces
+│       ├── TopBar.tsx              # Breadcrumbs, language toggle, & notifications
 │       ├── modals/
-│       │   ├── ActionDetailModal.tsx # Simulasi inspeksi payload Jira/Slack
-│       │   └── ExportModal.tsx       # Modal unduh notulen (Markdown / JSON)
+│       │   ├── ActionDetailModal.tsx # Jira/Slack payload inspector & dispatch simulator
+│       │   └── ExportModal.tsx       # Markdown and JSON export generator
 │       └── views/
-│           ├── DashboardView.tsx     # KPI metrik, aktivitas terkini, & tugas tertunda
-│           ├── InputView.tsx         # Input tab (Transcript, Mic Voice, Document, Query)
-│           ├── OutputView.tsx        # Notulen lengkap Template A, B, C, & E
-│           ├── ExtractionView.tsx    # Tabel granular fakta & kategori filter
-│           ├── DecisionView.tsx      # Matriks skor keputusan & gerbang konfirmasi
-│           ├── ActionPlanView.tsx    # Timeline tindakan agen & simulasi kirim
-│           ├── KnowledgeView.tsx     # Pengujian RAG & manajemen korpus vektor
-│           └── SettingsView.tsx      # Konfigurasi guardrails, webhook, & preferensi
-└── README.md                 # Dokumentasi resmi proyek
+│           ├── DashboardView.tsx     # Enterprise KPIs, activity feed, & pending actions
+│           ├── InputView.tsx         # Ingestion tabs (Transcript, Voice STT, Docs, Query)
+│           ├── OutputView.tsx        # Complete Minutes of Meeting (Templates A, B, C, E)
+│           ├── ExtractionView.tsx    # Granular table of tagged facts, risks, & filters
+│           ├── DecisionView.tsx      # Multi-criteria scoring matrix & human approval gate
+│           ├── ActionPlanView.tsx    # Agentic action timeline & dispatch triggers
+│           ├── KnowledgeView.tsx     # RAG connection status & vector search playground
+│           └── SettingsView.tsx      # System configuration, webhooks, & guardrail rules
+└── README.md                 # Official repository documentation
 ```
 
 ---
 
-## 🚀 6. Panduan Instalasi & Menjalankan Aplikasi
+## 🚀 6. Installation & Quickstart Guide
 
-### Prasyarat Sistem
-- **Node.js**: v18.0.0 atau yang lebih baru
-- **NPM** atau **Bun** / **Yarn**
-- **Browser Modern**: Google Chrome, Microsoft Edge, atau Safari (disarankan Chrome untuk dukungan penuh Web Speech API)
-- **API Key Google Gemini** *(opsional jika menggunakan mode evaluasi demo offline)*
+### System Prerequisites
+- **Node.js**: v18.0.0 or higher
+- **Package Manager**: `npm`, `bun`, or `yarn`
+- **Supported Browser**: Google Chrome or Microsoft Edge (recommended for native Web Speech API support)
+- **Google Gemini API Key** *(optional; comprehensive offline presets are provided for evaluation)*
 
-### Langkah Instalasi
+### Step-by-Step Setup
 
-1. **Clone Repositori**:
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/username/orion-orchestrator.git
+   git clone https://github.com/your-org/orion-orchestrator.git
    cd orion-orchestrator
    ```
 
-2. **Pasang Dependensi**:
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-3. **Konfigurasi Environment Variable**:
-   Salin file `.env.example` menjadi `.env.local` dan masukkan kunci API Gemini Anda:
+3. **Configure Environment Variables**:
+   Copy `.env.example` to `.env.local` and add your Google Gemini API key:
    ```bash
    cp .env.example .env.local
    ```
-   Isi file `.env.local`:
+   Add your key inside `.env.local`:
    ```env
    GEMINI_API_KEY=AIzaSyYourActualGoogleGeminiKeyHere
    ```
 
-4. **Jalankan Development Server**:
+4. **Start the Development Server**:
    ```bash
    npm run dev
    ```
-   Buka browser di alamat: `http://localhost:3000`
+   Open your browser and navigate to `http://localhost:3000`.
 
-5. **Build untuk Produksi**:
+5. **Build for Production**:
    ```bash
    npm run build
    ```
-   Hasil build siap saji akan berada di direktori `dist/`.
+   The compiled, production-ready static assets will be output to the `dist/` folder.
 
 ---
 
-## 🔒 7. Standar Keamanan & Etika Data
+## 🔒 7. Enterprise Security, Privacy & Ethics
 
-- **Zero Data Leakage**: Transkripsi audio diproses langsung di sisi klien melalui Web Speech API peramban tanpa perantara server pihak ketiga yang tidak berizin.
-- **Explicit Human Gate**: Tindakan berprioritas kritis (P0/P1) pada sistem eksternal (Jira/Slack/DB) tidak akan dieksekusi secara otonom tanpa verifikasi dari admin pengguna.
-- **Bilingual Veracity**: Setiap ringkasan mempertahankan konteks asli pernyataan pembicara tanpa mengubah substansi fakta bisnis.
+- **Client-Side Audio Safety**: Voice streams processed through the browser Web Speech API remain under client-side execution boundaries without unauthenticated external relays.
+- **Human-in-the-Loop Authority**: Automated agents cannot trigger sensitive corporate actions (such as high-priority Jira creations or budget approvals) without explicit human confirmation.
+- **Context-Faithful Bilingual Translation**: ORION preserves the original business intent and terminology without adding speculative interpretations.
 
 ---
 
-## 📄 8. Lisensi
+## 📄 8. License
 
-Proyek ini dirilis di bawah lisensi **MIT License**. Silakan gunakan, kembangkan, dan integrasikan untuk kebutuhan riset, enterprise, maupun komunitas.
+This project is licensed under the **MIT License**. You are free to inspect, modify, distribute, and integrate this software within enterprise or research workflows.
